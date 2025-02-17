@@ -12,6 +12,15 @@ app.get("/", (req, res) => {
     res.json({ message: "¡Bienvenido a la API!" });
 });
 
+app.post("/cancion", (req, res) => {
+    const {nombre, artista, album} = req.body;
+
+    res.status(200).json({
+        message: "Canción creada exitosamente",
+        data: {nombre, artista, album}
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
