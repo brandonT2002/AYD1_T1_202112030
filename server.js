@@ -21,6 +21,10 @@ app.post("/cancion", (req, res) => {
     })
 })
 
+app.get("/informacion", (req, res) => {
+    res.json({ message: "Brandon Tejaxún - 202112030" })
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
