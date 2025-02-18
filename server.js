@@ -13,11 +13,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/cancion", (req, res) => {
-    const {nombre, artista, album} = req.body;
+    const {nombre, artista, genero} = req.body;
 
     res.status(200).json({
         message: "Canción creada exitosamente",
-        data: {nombre, artista, album}
+        data: {nombre, artista, genero}
     })
 })
 
